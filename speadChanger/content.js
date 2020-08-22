@@ -1,6 +1,9 @@
-//_3euVJ  _3auIg _1QUKR _1MXsz colocar um desse no querySelectorAll
+//usar  no navegador no console
 // const audios = document.querySelectorAll("audio")
 //for(const audio of audios){audio.playbackRate = 3}
+
+//usar como extensão do google chrome 
+//_3euVJ  _3auIg _1QUKR _1MXsz colocar um desse no querySelectorAll
 const interval = setInterval(() => {
     const header = document.querySelectorAll("")
     if (header) {
