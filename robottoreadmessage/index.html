@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos/estilo.css" rel="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.10/tailwind.min.css">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        const utterance = new SpeechSynthesisUtterance();
+
+        utterance.lang = "pt-BR"
+        utterance.rate = 2; // velocidade da voz
+
+        function speak() {
+            speechSynthesis.speak(utterance); // speechSynthesis= um objeto global  .speak = vai falar alguam coisa 
+        }
+        function stop() {
+            speechSynthesis.cancel();
+        }
+
+        function setText(event) {
+            utterance.text = event.target.innerText;
+        }
+    </script>
+</head>
+
+<body class="m-auto text-center">
+    <div class="border border-purple m-4" contenteditable oninput="setText(event)">Seu texto aqui</div>
+    <button onclick="speak()" class="p-4 bg-purple-200 rounded shadow">Falar</button>
+    <button onclick="stop()" class="p-4 bg-purple-700 text-white rounded shadow">Parar</button>
+</body>
+
+</html>
